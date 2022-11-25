@@ -23,7 +23,6 @@ requirements:
     - matplotlib-base
     - napari
     - numpy
-    - pyqt
     - python >=3.8
     - qtpy
     - sc-3d
