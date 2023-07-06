@@ -1,11 +1,11 @@
-About napari-sc3d-viewer
-========================
+About napari-sc3d-viewer-feedstock
+==================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/napari-sc3d-viewer-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/GuignardLab/napari-sc3D-viewer
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/napari-sc3d-viewer-feedstock/blob/main/LICENSE.txt)
 
 Summary: A plugin to visualize 3D single cell omics
 
