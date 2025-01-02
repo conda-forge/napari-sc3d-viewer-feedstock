@@ -6,24 +6,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari-sc3D-viewer-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/napari-sc3D-viewer-{{ version }}.tar.gz
   sha256: 959d4e9c67f5f0d8e094a3a6a34dc2e5cc760c9d045f3b2e4a45044f4b402c09
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
     - magicgui
     - matplotlib-base
     - napari
     - numpy
-    - python >=3.8
+    - python >={{ python_min }}
     - qtpy
     - sc-3d
 
@@ -36,6 +36,7 @@ test:
   requires:
     - pip
     - pyqt
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/napari-sc3D-viewer/
