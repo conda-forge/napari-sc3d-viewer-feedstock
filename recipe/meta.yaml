@@ -1,18 +1,18 @@
 {% set name = "napari-sc3d-viewer" %}
-{% set version = "1.1.0" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/napari-sc3D-viewer-{{ version }}.tar.gz
-  sha256: 959d4e9c67f5f0d8e094a3a6a34dc2e5cc760c9d045f3b2e4a45044f4b402c09
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 5574fe7c66fd5069e8e2d0da2f5dfd9d3bf05080f745d599934197ae49985368
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
